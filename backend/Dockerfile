@@ -8,7 +8,7 @@
 
 
 # Using python 3.14 for this project
-FROM ghcr.io/astral-sh/uv:0.12.7-python3.14-bookworm-slim AS builder
+FROM ghcr.io/astral-sh/uv:0.12.7-python3.14-trixie-slim AS builder
 # Have uv compile .py into bytecode .pyc, and have uv copy instead of linking files
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
 
