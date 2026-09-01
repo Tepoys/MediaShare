@@ -30,7 +30,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 
 # Then, use a final image without uv
-FROM python:3.14-slim-bookworm
+FROM python:3.14-slim-trixie
 
 # Copy the application from the builder
 COPY --from=builder --chown=app:app /app /app
