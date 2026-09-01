@@ -1,8 +1,11 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+userRouter = APIRouter(
+    prefix="/users",
+    tags=["users"],
+)
 
 
-@router.get("/user/", tags=["users"])
+@userRouter.get("/")
 async def get_users():
-    pass
+    return {404: {"description": "Not found"}}
