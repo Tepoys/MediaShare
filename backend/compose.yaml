@@ -1,0 +1,15 @@
+services:
+  fastapi:
+    build:
+      context: .
+    pull_policy: build
+    image: media-share-backend:local
+    ports:
+      - "8000:8000"
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /app
+        - action: rebuild
+          path: ./pyproject.toml
